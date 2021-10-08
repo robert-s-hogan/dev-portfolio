@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 
 import { imageWrapper } from "../styles/index.module.css";
@@ -35,17 +34,9 @@ export default function IndexPage() {
     const episodes = data.allSanityEpisode.nodes;
     return (
         <Layout>
-            <div className={imageWrapper}>
-                <StaticImage
-                    src="../images/icon.png"
-                    alt="Gatsby Icon"
-                    placeholder="dominantColor"
-                    width={300}
-                    height={300}
-                />
-            </div>
-            <h1>Hello Frontend Masters</h1>
-            <Link to="/about">
+            <p>Hello</p>
+            <h1>Robert Hogan is a freelance frontend engineer </h1>
+            {/* <Link to="/about">
                 <button className="w-1/2 flex items-center justify-center rounded-full bg-black text-white">
                     About
                 </button>
@@ -59,7 +50,7 @@ export default function IndexPage() {
                         <small>posted</small>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
             {/* 
             <h2>Latest Episodes</h2>
             <ul>

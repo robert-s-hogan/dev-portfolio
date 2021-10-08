@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Seo } from "./seo.js";
 
-import { content } from "../styles/layout.module.css";
 import "../styles/global.css";
 
 export function Layout({
@@ -39,7 +39,17 @@ export function Layout({
                 path={path}
             />
             <header className="flex justify-between text-white bg-gray-700 p-4 text-2xl">
-                <Link to="/">{meta.title}</Link>
+                <Link to="/">
+                    <div className="flex items-center justify-center">
+                        <StaticImage
+                            src="../images/RH_logo_black.png"
+                            alt="Logo"
+                            placeholder="dominantColor"
+                            width={48}
+                            height={48}
+                        />
+                    </div>
+                </Link>
                 <nav role="navigation">
                     <div>
                         <button
@@ -98,7 +108,7 @@ export function Layout({
                     {
                         <div
                             id="nav_content"
-                            className={`w-full py-8 lg:flex lg:w-auto lg:py-0 lg:items-center rounded-br-full shadow-md lg:shadow-none bg-yellow-50 ${
+                            className={`w-full py-8 lg:flex lg:w-auto lg:py-0 lg:items-center shadow-md lg:shadow-none bg-yellow-50 ${
                                 navbarOpen ? "open" : ""
                             }`}
                         >
@@ -107,7 +117,7 @@ export function Layout({
                     }
                 </nav>
             </header>
-            <main className={content}>{children}</main>
+            <main className="max-w-4xl my-12 mx-auto px-4">{children}</main>
         </>
     );
 }
