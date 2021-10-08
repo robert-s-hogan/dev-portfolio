@@ -70,5 +70,6 @@ module.exports = {
                 dataset: "production",
             },
         },
+        "gatsby-plugin-postcss",
     ],
 };

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Seo } from "./seo.js";
 
-import { header, content } from "../styles/layout.module.css";
+import { content } from "../styles/layout.module.css";
 import "../styles/global.css";
 
 export function Layout({
@@ -38,12 +38,13 @@ export function Layout({
                 image={image}
                 path={path}
             />
-            <header className={header}>
+            <header className="flex justify-between text-white bg-gray-700 p-4 text-2xl">
                 <Link to="/">{meta.title}</Link>
                 <nav role="navigation">
                     <div>
                         <button
                             id="nav_toggle"
+                            className="text-white"
                             className="h-full w-full"
                             aria-label="Mobile Navigation"
                             onClick={() => setNavbarOpen(!navbarOpen)}

@@ -45,7 +45,11 @@ export default function IndexPage() {
                 />
             </div>
             <h1>Hello Frontend Masters</h1>
-            <Link to="/about">About this site</Link>
+            <Link to="/about">
+                <button className="w-1/2 flex items-center justify-center rounded-full bg-black text-white">
+                    About
+                </button>
+            </Link>
 
             <h2>Check out my recent posts</h2>
             <ul>
