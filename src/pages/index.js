@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
-
-import { imageWrapper } from "../styles/index.module.css";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
@@ -34,8 +33,33 @@ export default function IndexPage() {
     const episodes = data.allSanityEpisode.nodes;
     return (
         <Layout>
-            <p>Hello</p>
-            <h1>Robert Hogan is a freelance frontend engineer </h1>
+            <div className="flex relative">
+                <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-center text-white">
+                    <p className="space-mono">Hey, I'm Robert</p>
+                    <h1 className="text-4xl font-light">
+                        I <span className="font-bold">design</span> products
+                        people love
+                    </h1>
+                    <hr className="w-1/4 my-8 b-8" />
+                    <p>
+                        I'm a digital product designer focusing on crafting user
+                        experiences and design systems for web products.
+                        Currently I freelance at{" "}
+                        <a href="https://www.roberts.hogan.com" target="_blank">
+                            Robertshogan.com
+                        </a>
+                    </p>
+                </div>
+                <div className="md:w-1/2 md:flex-1 pl-8">
+                    <StaticImage
+                        placeholder="dominantColor"
+                        alt="Robert Hogan's Portrait Image"
+                        src="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_auto_brightness:-20,e_contrast:-20/e_brightness:-15/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg"
+                        height={1024}
+                    />
+                </div>
+            </div>
+
             {/* <Link to="/about">
                 <button className="w-1/2 flex items-center justify-center rounded-full bg-black text-white">
                     About

@@ -31,23 +31,26 @@ export function Layout({
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     return (
-        <>
+        <div className="bg-black">
             <Seo
                 title={title}
                 description={description}
                 image={image}
                 path={path}
             />
-            <header className="flex justify-between text-white bg-gray-700 p-4 text-2xl">
+            <header className="flex justify-between text-white p-4 text-2xl max-w-4xl">
                 <Link to="/">
                     <div className="flex items-center justify-center">
-                        <StaticImage
+                        <p className="uppercase text-2xl font-bold tracking-widest">
+                            RH
+                        </p>
+                        {/* <StaticImage
                             src="../images/RH_logo_black.png"
                             alt="Logo"
                             placeholder="dominantColor"
                             width={48}
                             height={48}
-                        />
+                        /> */}
                     </div>
                 </Link>
                 <nav role="navigation">
@@ -117,8 +120,10 @@ export function Layout({
                     }
                 </nav>
             </header>
-            <main className="max-w-4xl my-12 mx-auto px-4">{children}</main>
-        </>
+            <main className="max-w-4xl my-2 mx-auto pl-4 md:px-4">
+                {children}
+            </main>
+        </div>
     );
 }
 
