@@ -38,7 +38,7 @@ export function Layout({
                 image={image}
                 path={path}
             />
-            <header className="flex justify-between text-white p-4 text-2xl max-w-4xl">
+            <header className="flex justify-between text-white p-4 text-2xl max-w-4xl mx-auto">
                 <Link to="/">
                     <div className="flex items-center justify-center">
                         <p className="uppercase text-2xl font-bold tracking-widest">
@@ -58,7 +58,7 @@ export function Layout({
                         <button
                             id="nav_toggle"
                             className="text-white"
-                            className="h-full w-full"
+                            className="h-full w-full lg:hidden"
                             aria-label="Mobile Navigation"
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >
@@ -111,8 +111,8 @@ export function Layout({
                     {
                         <div
                             id="nav_content"
-                            className={`w-full py-8 lg:flex lg:w-auto lg:py-0 lg:items-center shadow-md lg:shadow-none bg-yellow-50 ${
-                                navbarOpen ? "open" : ""
+                            className={`w-full lg:flex lg:w-auto lg:py-0 lg:items-center ${
+                                navbarOpen ? "open" : "hidden"
                             }`}
                         >
                             <Link to="/about">About</Link>

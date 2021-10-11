@@ -34,21 +34,23 @@ export default function IndexPage() {
     return (
         <Layout>
             <div className="flex relative">
-                <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-center text-white">
-                    <p className="space-mono">Hey, I'm Robert</p>
-                    <h1 className="text-4xl font-light">
-                        I <span className="font-bold">design</span> products
-                        people love
-                    </h1>
-                    <hr className="w-1/4 my-8 b-8" />
-                    <p>
-                        I'm a digital product designer focusing on crafting user
-                        experiences and design systems for web products.
-                        Currently I freelance at{" "}
-                        <a href="https://www.roberts.hogan.com" target="_blank">
-                            Robertshogan.com
-                        </a>
+                <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white">
+                    <p className="space-mono font-bold text-5xl">
+                        Hi, I'm Robert.
                     </p>
+                    <h1 className="text-xl font-light mt-8">
+                        I'm a <span class="font-bold">software engineer</span>{" "}
+                        in <span class="font-bold">California</span>. I mostly
+                        focus on the <span class="font-bold">front-end</span> of
+                        the web.
+                    </h1>
+                    <hr className="w-1/4 mt-8 mb-4" />
+                    <StaticImage
+                        src="../images/linkedin.png"
+                        alt="LinkedIn Logo"
+                        className="text-white mb-8"
+                        height={24}
+                    />
                 </div>
                 <div className="md:w-1/2 md:flex-1 pl-8">
                     <StaticImage
