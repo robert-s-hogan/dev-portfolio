@@ -67,7 +67,7 @@ export function Layout({
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="36"
                                 height="36"
-                                fill="#4B5563"
+                                fill="#FFFFFF"
                                 viewBox="0 0 256 256"
                             >
                                 <rect
@@ -108,17 +108,23 @@ export function Layout({
                             </svg>
                         </button>
                     </div>
-                    {
-                        <div
-                            id="nav_content"
-                            className={`w-full lg:flex lg:w-auto lg:py-0 lg:items-center ${
-                                navbarOpen ? "open" : "hidden"
-                            }`}
-                        >
-                            <Link to="/about">About</Link>
-                        </div>
-                    }
                 </nav>
+                {
+                    <div
+                        id="nav_content"
+                        className={`w-full h-full fixed bg-black z-50 overflow-auto flex flex-col w-auto py-0 justify-center items-center ${
+                            navbarOpen ? "open" : "hidden"
+                        }`}
+                    >
+                        <button
+                            className="absolute top-0 right-8 text-3xl"
+                            onClick={() => setNavbarOpen(!navbarOpen)}
+                        >
+                            X
+                        </button>
+                        <Link to="/about">About</Link>
+                    </div>
+                }
             </header>
             <main className="max-w-4xl my-2 mx-auto pl-4 md:px-4">
                 {children}
