@@ -49,7 +49,7 @@ export default function IndexPage() {
                         src="../images/linkedin.png"
                         alt="LinkedIn Logo"
                         className="text-white mb-8"
-                        height={24}
+                        height={36}
                     />
                 </div>
                 <div className="md:w-1/2 md:flex-1 pl-8">
