@@ -40,9 +40,15 @@ export default function IndexPage() {
                     </p>
                     <h1 className="text-xl font-light mt-8">
                         I'm a <span class="font-bold">software engineer</span>{" "}
-                        in <span class="font-bold">California</span>. I mostly
-                        focus on the <span class="font-bold">front-end</span> of
-                        the web.
+                        in{" "}
+                        <span class="font-bold  bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200">
+                            California
+                        </span>
+                        . I mostly focus on the{" "}
+                        <span class="font-bold  bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200">
+                            front-end
+                        </span>{" "}
+                        of the web.
                     </h1>
                     <hr className="w-1/4 mt-8 mb-4" />
                     <StaticImage

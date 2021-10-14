@@ -2,9 +2,9 @@ import * as React from "react";
 import { useState, useEffect, useRef } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { gsap } from "gsap";
 
 import { Seo } from "./seo.js";
+import Hamburger from "./hamburger.js";
 
 import "../styles/global.css";
 
@@ -32,14 +32,13 @@ export function Layout({
 
     const [navbarOpen, setNavbarOpen] = useState(false);
 
-    const mobileMenuRef = useRef();
-
-    useEffect(() => {
-        gsap.to(mobileMenuRef.current, { rotation: "+=360" });
-    });
+    const activeSide =
+        "bg-gray-800 h-screen w-60 transform transition-all fixed duration-700 text-white flex justify-center p-2";
+    const hiddenSide =
+        "bg-gray-800 h-screen w-60 transform transition-all fixed duration-700 text-white flex justify-center p-2 -translate-y-full";
 
     return (
-        <div className="bg-black">
+        <div className="bg-gray-900">
             <Seo
                 title={title}
                 description={description}
@@ -54,40 +53,28 @@ export function Layout({
                         </p>
                     </div>
                 </Link>
-                <nav role="navigation">
-                    <div>
-                        <button
-                            id="nav_toggle"
-                            className="text-white"
-                            className="h-full w-full lg:hidden"
-                            aria-label="Mobile Navigation"
-                            onClick={() => setNavbarOpen(!navbarOpen)}
-                        >
-                            <StaticImage
-                                src="../images/menu_open.png"
-                                height={36}
-                            />
-                        </button>
-                    </div>
+                <nav role="navigation" className="z-50">
+                    <Hamburger
+                        id="nav_toggle"
+                        aria-label="Mobile Navigation"
+                        navbarOpen={navbarOpen}
+                        setNavbarOpen={setNavbarOpen}
+                    />
                 </nav>
                 {
                     <div
-                        ref={mobileMenuRef}
+                        // ref={tl}
                         id="nav_content"
-                        className={`w-full h-full fixed bg-black z-50 overflow-hidden flex flex-col w-auto py-0 justify-center items-center ${
-                            navbarOpen ? "open" : "hidden"
+                        className={`h-full w-full fixed right-0 bg-black -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center ${
+                            navbarOpen ? activeSide : hiddenSide
                         }`}
                     >
-                        <button
-                            className="absolute top-0 right-8 text-3xl"
-                            onClick={() => setNavbarOpen(!navbarOpen)}
-                        >
-                            <StaticImage
-                                src="../images/mobile_delete.png"
-                                height={36}
-                            />
-                        </button>
-                        <Link to="/about">About</Link>
+                        <Link to="/" className="font-bold py-3 text-4xl">
+                            Home
+                        </Link>
+                        <Link to="/about" className="font-bold py-3 text-4xl">
+                            About
+                        </Link>
                     </div>
                 }
             </header>
