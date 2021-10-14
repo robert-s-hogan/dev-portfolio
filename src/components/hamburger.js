@@ -7,7 +7,7 @@ export default function IndexPage({ navbarOpen, setNavbarOpen }) {
     return (
         <button
             id="nav_toggle"
-            className="flex flex-col h-12 w-12 rounded justify-center items-center group"
+            className="flex flex-col h-12 w-12 rounded justify-center items-center group bg-gray-900"
             onClick={() => setNavbarOpen(!navbarOpen)}
         >
             <div

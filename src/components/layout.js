@@ -65,19 +65,19 @@ export function Layout({
                     <div
                         // ref={tl}
                         id="nav_content"
-                        className={`h-full w-full fixed right-0 bg-gray-700 -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center ${
+                        className={`h-full w-full fixed right-0 bg-white -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center ${
                             navbarOpen ? activeSide : hiddenSide
                         }`}
                     >
                         <Link
                             to="/"
-                            className="font-bold py-3 text-4xl text-white"
+                            className="font-bold py-3 text-4xl text-black"
                         >
                             Home
                         </Link>
                         <Link
                             to="/about"
-                            className="font-bold py-3 text-4xl text-white"
+                            className="font-bold py-3 text-4xl text-black"
                         >
                             About
                         </Link>
