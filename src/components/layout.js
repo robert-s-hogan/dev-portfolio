@@ -38,7 +38,7 @@ export function Layout({
         "bg-gray-800 h-screen w-60 transform transition-all fixed duration-700 text-white flex justify-center p-2 -translate-y-full";
 
     return (
-        <div className="bg-gray-900">
+        <div className="bg-gray-900 dark:bg-white">
             <Seo
                 title={title}
                 description={description}
@@ -53,7 +53,10 @@ export function Layout({
                         </p>
                     </div>
                 </Link>
-                <nav role="navigation" className="z-50">
+                <nav role="navigation" className="z-50 flex">
+                    <button className="mr-8" id="switchTheme">
+                        DarkLight
+                    </button>
                     <Hamburger
                         id="nav_toggle"
                         aria-label="Mobile Navigation"
@@ -65,7 +68,7 @@ export function Layout({
                     <div
                         // ref={tl}
                         id="nav_content"
-                        className={`h-full w-full fixed right-0 bg-white -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center ${
+                        className={`h-full w-full fixed right-0 bg-white -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center md:visible ${
                             navbarOpen ? activeSide : hiddenSide
                         }`}
                     >
@@ -83,10 +86,28 @@ export function Layout({
                         </Link>
                     </div>
                 }
+                <div className="hidden md:block">
+                    <ul className="md:flex">
+                        <li>
+                            <Link
+                                to="#projects"
+                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
+                            >
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="#about"
+                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
+                            >
+                                About
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </header>
-            <main className="max-w-4xl my-2 mx-auto pl-4 md:px-4">
-                {children}
-            </main>
+            <main className="max-w-4xl mx-auto pl-4 md:px-4">{children}</main>
         </div>
     );
 }
