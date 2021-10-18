@@ -2,6 +2,7 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
+import ProjectCard from "../components/project-card.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
@@ -33,7 +34,10 @@ export default function IndexPage() {
     // const episodes = data.allSanityEpisode.nodes;
     return (
         <Layout>
-            <div className="flex relative pb-12">
+            <section
+                id="hero"
+                className="max-w-4xl pl-4 mx-auto flex relative pb-12"
+            >
                 <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white">
                     <h1 className="space-mono font-bold text-3xl lg:text-4xl md:leading-relaxed">
                         Robert is a software engineer in California that mostly
@@ -63,15 +67,40 @@ export default function IndexPage() {
                         height={24}
                     />
                 </div>
-                <div className="md:w-1/2 md:flex-1 pl-8">
+                <div className="md:w-1/2 md:flex-1 pl-8 md:pl-0">
                     <StaticImage
                         placeholder="dominantColor"
                         alt="Robert Hogan's Portrait Image"
-                        src="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_auto_brightness:-25,e_contrast:-25/e_brightness:-15/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg"
+                        src="https://res.cloudinary.com/dmfdjwwgb/image/upload/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg"
                         height={1024}
                     />
                 </div>
-            </div>
+            </section>
+            <section id="featured-projects" className="max-w-7xl mx-auto">
+                <h2 className="text-2xl text-center text-white">
+                    Featured Projects
+                </h2>
+                <div className="flex flex-wrap">
+                    <ProjectCard
+                        projectName="3rd Party API Pagination"
+                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1628620671/robertshogan.com/react-query-star-wars-pagination_zidfyr.png"
+                        techUsed="React, TypeScript, CSS"
+                        projectDescription=" This project consumes a free API and creates pagination to view all entries."
+                    ></ProjectCard>
+                    <ProjectCard
+                        projectName="Concentration: A Game of Memory"
+                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1626888069/robertshogan.com/rsh_js_memory_game_euf8fa.jpg"
+                        techUsed="JavaScript"
+                        projectDescription=" This project was made with Vanilla JavaScript and designed assets."
+                    ></ProjectCard>
+                    <ProjectCard
+                        projectName="Coffee Shop Template"
+                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1634595797/robertshogan.com/coffee_shop_desktop_drgjtx.jpg"
+                        techUsed="React, Gatsby, TailwindCSS"
+                        projectDescription=" Sample coffee shop template using TailwindCSS, Gatsby, and hosted on Netlify."
+                    ></ProjectCard>
+                </div>
+            </section>
         </Layout>
     );
 }

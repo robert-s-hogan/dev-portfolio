@@ -45,7 +45,7 @@ export function Layout({
                 image={image}
                 path={path}
             />
-            <header className="flex justify-between text-white p-4 text-2xl max-w-4xl mx-auto">
+            <header className="flex justify-between text-white p-4 lg:px-0 text-2xl max-w-4xl mx-auto">
                 <Link to="/">
                     <div className="flex items-center justify-center">
                         <p className="uppercase text-2xl font-bold tracking-widest">
@@ -54,9 +54,9 @@ export function Layout({
                     </div>
                 </Link>
                 <nav role="navigation" className="z-50 flex">
-                    <button className="mr-8" id="switchTheme">
+                    {/* <button className="mr-8" id="switchTheme">
                         DarkLight
-                    </button>
+                    </button> */}
                     <Hamburger
                         id="nav_toggle"
                         aria-label="Mobile Navigation"
@@ -99,7 +99,7 @@ export function Layout({
                         <li>
                             <Link
                                 to="#about"
-                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
+                                className="pr-3 lg:pr-0 uppercase text-white text-sm inline-block align-middle"
                             >
                                 About
                             </Link>
@@ -107,7 +107,7 @@ export function Layout({
                     </ul>
                 </div>
             </header>
-            <main className="max-w-4xl mx-auto pl-4 md:px-4">{children}</main>
+            <main className="mx-auto">{children}</main>
         </div>
     );
 }
