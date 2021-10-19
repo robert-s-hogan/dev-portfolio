@@ -80,24 +80,30 @@ export default function IndexPage() {
                 <h2 className="text-2xl text-center text-white">
                     Featured Projects
                 </h2>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap px-4">
                     <ProjectCard
                         projectName="3rd Party API Pagination"
                         react="true"
                         typescript="true"
                         css="true"
+                        git="https://github.com/robert-s-hogan/react-query-pagination-assessment"
+                        url="https://robert-s-hogan.github.io/react-query-pagination-assessment/"
                         projectDescription=" This project consumes a free API and creates pagination to view all entries."
                     ></ProjectCard>
                     <ProjectCard
                         projectName="Concentration: A Game of Memory"
                         javascript="true"
                         css="true"
+                        git="https://github.com/robert-s-hogan/Project-Memory-Game"
+                        url="https://robert-s-hogan.github.io/Project-Memory-Game/"
                         projectDescription=" This project was made with Vanilla JavaScript and designed assets."
                     ></ProjectCard>
                     <ProjectCard
                         projectName="Coffee Shop Template"
                         react="true"
                         gatsby="true"
+                        git="https://github.com/robert-s-hogan/gatsby-coffee-shop"
+                        url="https://local-coffee-shop-gatsby-tailwind.netlify.app/"
                         tailwindcss="true"
                         projectDescription=" Sample coffee shop template using TailwindCSS, Gatsby, and hosted on Netlify."
                     ></ProjectCard>
