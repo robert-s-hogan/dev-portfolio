@@ -80,7 +80,7 @@ export default function IndexPage() {
                 <h2 className="text-2xl text-center text-white">
                     Featured Projects
                 </h2>
-                <div className="flex flex-wrap px-4">
+                <div className="flex flex-wrap md:space-x-2 px-4">
                     <ProjectCard
                         projectName="3rd Party API Pagination"
                         react="true"
