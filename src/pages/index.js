@@ -83,20 +83,22 @@ export default function IndexPage() {
                 <div className="flex flex-wrap">
                     <ProjectCard
                         projectName="3rd Party API Pagination"
-                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1628620671/robertshogan.com/react-query-star-wars-pagination_zidfyr.png"
-                        techUsed="React, TypeScript, CSS"
+                        react="true"
+                        typescript="true"
+                        css="true"
                         projectDescription=" This project consumes a free API and creates pagination to view all entries."
                     ></ProjectCard>
                     <ProjectCard
                         projectName="Concentration: A Game of Memory"
-                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1626888069/robertshogan.com/rsh_js_memory_game_euf8fa.jpg"
-                        techUsed="JavaScript"
+                        javascript="true"
+                        css="true"
                         projectDescription=" This project was made with Vanilla JavaScript and designed assets."
                     ></ProjectCard>
                     <ProjectCard
                         projectName="Coffee Shop Template"
-                        bg="https://res.cloudinary.com/dmfdjwwgb/image/upload/e_brightness_hsb:-65/v1634595797/robertshogan.com/coffee_shop_desktop_drgjtx.jpg"
-                        techUsed="React, Gatsby, TailwindCSS"
+                        react="true"
+                        gatsby="true"
+                        tailwindcss="true"
                         projectDescription=" Sample coffee shop template using TailwindCSS, Gatsby, and hosted on Netlify."
                     ></ProjectCard>
                 </div>
