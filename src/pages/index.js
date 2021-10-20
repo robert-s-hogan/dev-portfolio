@@ -60,12 +60,6 @@ export default function IndexPage() {
                         I engineer beatiful websites that are fast, functional
                         and accessible to everyone.
                     </p>
-                    <StaticImage
-                        src="../images/linkedin.png"
-                        alt="LinkedIn Logo"
-                        className="text-white mb-8"
-                        height={24}
-                    />
                 </div>
                 <div className="md:w-1/2 md:flex-1 pl-8 md:pl-0">
                     <StaticImage
@@ -77,8 +71,8 @@ export default function IndexPage() {
                 </div>
             </section>
             <section id="featured-projects" className="max-w-7xl mx-auto">
-                <h2 className="text-2xl text-center text-white">
-                    Featured Projects
+                <h2 className="text-sm font-light uppercase text-white pl-4">
+                    Featured Projects &mdash;
                 </h2>
                 <div className="flex flex-wrap md:space-x-2 px-4">
                     <ProjectCard

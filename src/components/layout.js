@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
@@ -107,7 +107,40 @@ export function Layout({
                     </ul>
                 </div>
             </header>
-            <main className="mx-auto">{children}</main>
+            <main className="mx-auto mb-8">{children}</main>
+            <footer className="mx-auto font-thin text-white max-w-7xl pl-4">
+                <section id="contact" className="max-w-7xl mx-auto">
+                    <h2 className="text-sm font-normal uppercase text-white mb-4">
+                        Contact &mdash;
+                    </h2>
+                    <div className="flex content-center mb-12 space-x-4">
+                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                            <StaticImage
+                                placeholder="dominantColor"
+                                src="../images/email_icon.svg"
+                                height={24}
+                            />
+                        </a>
+                        <a href="https://www.linkedin.com">
+                            <StaticImage
+                                src="../images/linkedin.png"
+                                alt="LinkedIn Logo"
+                                className="text-white mb-8"
+                                height={24}
+                            />
+                        </a>
+                        <a href="https://www.linkedin.com">
+                            <StaticImage
+                                src="../images/twitter_logo.svg"
+                                alt="LinkedIn Logo"
+                                className="text-white mb-8"
+                                height={24}
+                            />
+                        </a>
+                    </div>
+                </section>
+                &copy; 2021 Robert Hogan
+            </footer>
         </div>
     );
 }
