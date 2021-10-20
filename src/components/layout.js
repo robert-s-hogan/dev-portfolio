@@ -38,7 +38,7 @@ export function Layout({
         "bg-gray-800 h-screen w-60 transform transition-all fixed duration-700 text-white flex justify-center p-2 -translate-y-full";
 
     return (
-        <div className="bg-gray-900 dark:bg-white">
+        <div className="bg-gray-900 dark:bg-black">
             <Seo
                 title={title}
                 description={description}
@@ -110,7 +110,7 @@ export function Layout({
             <main className="mx-auto mb-8">{children}</main>
             <footer className="mx-auto font-thin text-white max-w-7xl pl-4">
                 <section id="contact" className="max-w-7xl mx-auto">
-                    <h2 className="text-sm font-normal uppercase text-white mb-4">
+                    <h2 className="text-sm font-thin uppercase text-white mb-4">
                         Contact &mdash;
                     </h2>
                     <div className="flex content-center mb-12 space-x-4">
@@ -133,13 +133,13 @@ export function Layout({
                             <StaticImage
                                 src="../images/twitter_logo.svg"
                                 alt="LinkedIn Logo"
-                                className="text-white mb-8"
+                                className="text-white dark:text-black mb-8"
                                 height={24}
                             />
                         </a>
                     </div>
                 </section>
-                &copy; 2021 Robert Hogan
+                <p className="dark:text-black">&copy; 2021 Robert Hogan</p>
             </footer>
         </div>
     );

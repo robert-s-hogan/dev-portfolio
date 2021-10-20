@@ -71,7 +71,7 @@ export default function IndexPage() {
                 </div>
             </section>
             <section id="featured-projects" className="max-w-7xl mx-auto">
-                <h2 className="text-sm font-light uppercase text-white pl-4">
+                <h2 className="text-sm font-light uppercase text-white pl-4 dark:text-black">
                     Featured Projects &mdash;
                 </h2>
                 <div className="flex flex-wrap md:space-x-2 px-4">
