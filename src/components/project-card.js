@@ -14,7 +14,9 @@ export default function ProjectCard({
     typescript,
     javascript,
     git,
+    netlify,
     url,
+    buttonTitle,
 }) {
     return (
         <div
@@ -27,13 +29,23 @@ export default function ProjectCard({
         >
             <div className="flex justify-end">
                 <a href={git} className="self-center mb-4">
-                    <img
-                        src="https://img.icons8.com/material-outlined/36/FFFFFF/github.png"
-                        alt="Github Logo"
-                        className="self-center pr-2"
-                    />
+                    {git ? (
+                        <img
+                            src="https://img.icons8.com/material-outlined/36/FFFFFF/github.png"
+                            alt="Github Logo"
+                            className="self-center pr-2"
+                        />
+                    ) : (
+                        <StaticImage
+                            src="../images/all_projects.svg"
+                            alt="Dashboard Icon"
+                            className="self-center mr-2"
+                            height={30}
+                        />
+                    )}
                 </a>
             </div>
+
             <h2 className="text-2xl uppercase">{projectName}</h2>
             <p className="text-sm py-4">{projectDescription}</p>
 
@@ -94,15 +106,26 @@ export default function ProjectCard({
                         />
                     </div>
                 )}
+                {netlify && (
+                    <div className="mr-2">
+                        <StaticImage
+                            height={20}
+                            alt="CSS3 Logo"
+                            src="../images/netlify_logo.svg"
+                        />
+                    </div>
+                )}
             </div>
 
-            <div className="flex justify-between mt-4">
-                <a href={url}>
-                    <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
-                        Live Project
-                    </button>
-                </a>
-            </div>
+            {url && (
+                <div className="flex justify-between mt-4">
+                    <a href={url}>
+                        <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
+                            {buttonTitle ? buttonTitle : "Live Project"}
+                        </button>
+                    </a>
+                </div>
+            )}
 
             {/* <Link to="/">&larr; back</Link> */}
         </div>

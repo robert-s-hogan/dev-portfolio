@@ -82,30 +82,37 @@ export default function IndexPage() {
                 </h2>
                 <div className="flex flex-wrap md:space-x-2 px-4">
                     <ProjectCard
-                        projectName="3rd Party API Pagination"
+                        projectName="API Pagination"
                         react="true"
                         typescript="true"
                         css="true"
                         git="https://github.com/robert-s-hogan/react-query-pagination-assessment"
                         url="https://robert-s-hogan.github.io/react-query-pagination-assessment/"
-                        projectDescription=" This project consumes a free API and creates pagination to view all entries."
+                        projectDescription=" This project consumes a 3rd party API and creates pagination to view all entries."
                     ></ProjectCard>
                     <ProjectCard
-                        projectName="Concentration: A Game of Memory"
+                        projectName="Game of Memory"
                         javascript="true"
                         css="true"
                         git="https://github.com/robert-s-hogan/Project-Memory-Game"
                         url="https://robert-s-hogan.github.io/Project-Memory-Game/"
-                        projectDescription=" This project was made with Vanilla JavaScript and designed assets."
+                        projectDescription="This project was made with Vanilla JavaScript and designed assets."
                     ></ProjectCard>
                     <ProjectCard
-                        projectName="Coffee Shop Template"
+                        projectName="Coffee Shop"
                         react="true"
                         gatsby="true"
+                        netlify="true"
                         git="https://github.com/robert-s-hogan/gatsby-coffee-shop"
                         url="https://local-coffee-shop-gatsby-tailwind.netlify.app/"
                         tailwindcss="true"
-                        projectDescription=" Sample coffee shop template using TailwindCSS, Gatsby, and hosted on Netlify."
+                        projectDescription="Generic coffee shop template using TailwindCSS, Gatsby hosted on Netlify."
+                    ></ProjectCard>
+                    <ProjectCard
+                        projectName="Other Projects"
+                        url="/other-projects"
+                        projectDescription="Various projects and tutorials using different technologies."
+                        buttonTitle="View Projects"
                     ></ProjectCard>
                 </div>
             </section>
