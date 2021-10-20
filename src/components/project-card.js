@@ -16,6 +16,7 @@ export default function ProjectCard({
     git,
     netlify,
     url,
+    code,
     buttonTitle,
 }) {
     return (
@@ -27,7 +28,7 @@ export default function ProjectCard({
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <div className="flex justify-end">
+            <div className={`flex justify-end ${git ? "" : "mb-2"}`}>
                 <a href={git} className="self-center mb-4">
                     {git ? (
                         <img
@@ -39,8 +40,8 @@ export default function ProjectCard({
                         <StaticImage
                             src="../images/all_projects.svg"
                             alt="Dashboard Icon"
-                            className="self-center mr-2"
-                            height={30}
+                            className="self-center mr-2 mb-1"
+                            height={20}
                         />
                     )}
                 </a>
@@ -115,10 +116,19 @@ export default function ProjectCard({
                         />
                     </div>
                 )}
+                {code && (
+                    <div className="mr-2">
+                        <StaticImage
+                            height={20}
+                            alt="CSS3 Logo"
+                            src="../images/code.svg"
+                        />
+                    </div>
+                )}
             </div>
 
             {url && (
-                <div className="flex justify-between mt-4">
+                <div className="mt-4">
                     <a href={url}>
                         <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
                             {buttonTitle ? buttonTitle : "Live Project"}

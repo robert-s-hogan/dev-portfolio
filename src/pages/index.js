@@ -57,8 +57,8 @@ export default function IndexPage() {
                     </h1> */}
                     <hr className="w-1/4 mt-4 mb-4" />
                     <p className="mb-4">
-                        I craft beatiful websites that are fast, functional and
-                        accessible to everyone.
+                        I engineer beatiful websites that are fast, functional
+                        and accessible to everyone.
                     </p>
                     <StaticImage
                         src="../images/linkedin.png"
@@ -111,6 +111,7 @@ export default function IndexPage() {
                     <ProjectCard
                         projectName="Other Projects"
                         url="/other-projects"
+                        code="true"
                         projectDescription="Various projects and tutorials using different technologies."
                         buttonTitle="View Projects"
                     ></ProjectCard>
