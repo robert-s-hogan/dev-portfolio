@@ -2,7 +2,8 @@ module.exports = {
     siteMetadata: {
         siteUrl: "https://defaultmultipagegatsbystarterm.gatsbyjs.io/",
         title: "Frontend Engineer Portfolio | Robert Hogan",
-        description: "Here is the default starter multi-page",
+        description:
+            "Robert is a software engineer in California that mostly focuses on the front-end of the web. I engineer beatiful websites that are fast, functional and accessible to everyone.",
         image: "https://res.cloudinary.com/dmfdjwwgb/image/upload/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg",
     },
     plugins: [
@@ -66,7 +67,7 @@ module.exports = {
         {
             resolve: "gatsby-source-sanity",
             options: {
-                projectId: "vnkupgyb",
+                projectId: "cruda0lx",
                 dataset: "production",
             },
         },

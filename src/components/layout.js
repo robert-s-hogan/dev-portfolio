@@ -110,7 +110,7 @@ export function Layout({
             <main className="mx-auto mb-8">{children}</main>
             <footer className="mx-auto font-thin text-white max-w-7xl pl-4">
                 <section id="contact" className="max-w-7xl mx-auto">
-                    <h2 className="text-sm font-thin uppercase text-white mb-4">
+                    <h2 className="text-sm font-thin uppercase text-white mb-1">
                         Contact &mdash;
                     </h2>
                     <div className="flex content-center mb-12 space-x-4">

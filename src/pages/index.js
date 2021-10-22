@@ -1,36 +1,36 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
-        query GetBlogPosts {
-            allMdx {
-                nodes {
-                    id
-                    slug
-                    frontmatter {
+        query AllPosts {
+            allSanityPost {
+                edges {
+                    node {
+                        body {
+                            children {
+                                text
+                            }
+                        }
+                        id
+                        slug {
+                            current
+                        }
                         title
+                        author {
+                            name
+                            _createdAt(formatString: "MMMM DD, YYYY")
+                        }
                     }
                 }
             }
-            # allSanityEpisode(sort: { fields: date, order: DESC }, limit: 20) {
-            #     nodes {
-            #         id
-            #         title
-            #         guest {
-            #             name
-            #         }
-            #         gatsbyPath(
-            #             filePath: "/episode/{SanityEpisode.slug__current}"
-            #         )
-            #     }
-            # }
         }
     `);
-    // const posts = data.allMdx.nodes;
+    const posts = data.allSanityPost.edges;
+    console.log(posts);
     // const episodes = data.allSanityEpisode.nodes;
     return (
         <Layout>
@@ -43,18 +43,6 @@ export default function IndexPage() {
                         Robert is a software engineer in California that mostly
                         focuses on the front-end of the web.
                     </h1>
-                    {/* <h1 className="text-xl font-light mt-8">
-                        I'm a <span class="font-bold">software engineer</span>{" "}
-                        in{" "}
-                        <span class="font-bold  bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200">
-                            California
-                        </span>
-                        . I mostly focus on the{" "}
-                        <span class="font-bold  bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200">
-                            front-end
-                        </span>{" "}
-                        of the web.
-                    </h1> */}
                     <hr className="w-1/4 mt-4 mb-4" />
                     <p className="mb-4">
                         I engineer beatiful websites that are fast, functional
@@ -71,7 +59,7 @@ export default function IndexPage() {
                 </div>
             </section>
             <section id="featured-projects" className="max-w-7xl mx-auto">
-                <h2 className="text-sm font-light uppercase text-white pl-4 dark:text-black">
+                <h2 className="text-sm font-thin uppercase text-white pl-4">
                     Featured Projects &mdash;
                 </h2>
                 <div className="flex flex-wrap md:space-x-2 px-4">
@@ -109,6 +97,33 @@ export default function IndexPage() {
                         projectDescription="Various projects and tutorials using different technologies."
                         buttonTitle="View Projects"
                     ></ProjectCard>
+                </div>
+            </section>
+            <section
+                id="posts"
+                className="max-w-7xl mx-auto text-white dark:text-black pl-4 mt-8 "
+            >
+                <h2 className="text-sm font-thin uppercase text-white mb-2">
+                    Writing &mdash;
+                </h2>
+                <div className="text-white flex">
+                    {posts.map(post => (
+                        <div
+                            key={post.node.id}
+                            id={post.node.id}
+                            className="w-1/3 border p-4 mr-2"
+                        >
+                            <p className="text-xs text-gray-400 mb-2">
+                                {post.node.author._createdAt}
+                            </p>
+                            <Link
+                                to={`https://www.robert.dev/{post.node.slug.current}`}
+                            >
+                                <h3 className="text-xl">{post.node.title}</h3>
+                            </Link>
+                            {/* <p className="text-lg">{post.node.children.body}</p> */}
+                        </div>
+                    ))}
                 </div>
             </section>
         </Layout>
