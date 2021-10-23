@@ -116,6 +116,7 @@ export function Layout({
                     <div className="flex content-center mb-12 space-x-4">
                         <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
                             <StaticImage
+                                alt="email icon"
                                 placeholder="dominantColor"
                                 src="../images/email_icon.svg"
                                 height={24}

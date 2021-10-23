@@ -21,7 +21,7 @@ export default function ProjectCard({
 }) {
     return (
         <div
-            className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center hover:bg-gray-800 text-white px-4 py-8 md:px-8 border border my-2"
+            className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundPosition: "contain",

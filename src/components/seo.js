@@ -25,11 +25,6 @@ export function Seo(props) {
     const image = new URL(props.image || defaults.image, defaults.siteUrl);
     const url = new URL(props.path || "/", defaults.siteUrl);
 
-    console.log(title);
-    console.log(url);
-    console.log(image);
-    console.log(description);
-
     return (
         <Helmet
             htmlAttributes={{

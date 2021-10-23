@@ -3,35 +3,38 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
+import WritingCategories from "../components/writing-categories.js";
+import WritingBody from "../components/writing-body.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
         query AllPosts {
             allSanityPost {
-                edges {
-                    node {
-                        body {
-                            children {
-                                text
-                            }
-                        }
-                        id
-                        slug {
-                            current
-                        }
+                nodes {
+                    title
+                    slug {
+                        current
+                    }
+                    _createdAt(formatString: "DD MMMM, YYYY")
+                    id
+                    categories {
                         title
-                        author {
-                            name
-                            _createdAt(formatString: "MMMM DD, YYYY")
+                        id
+                    }
+                    body {
+                        children {
+                            text
                         }
+                        _key
                     }
                 }
             }
         }
     `);
-    const posts = data.allSanityPost.edges;
+    const posts = data.allSanityPost.nodes;
+
     console.log(posts);
-    // const episodes = data.allSanityEpisode.nodes;
+
     return (
         <Layout>
             <section
@@ -109,19 +112,18 @@ export default function IndexPage() {
                 <div className="text-white flex">
                     {posts.map(post => (
                         <div
-                            key={post.node.id}
-                            id={post.node.id}
+                            key={post.id}
+                            id={post.id}
                             className="w-1/3 border p-4 mr-2"
                         >
-                            <p className="text-xs text-gray-400 mb-2">
-                                {post.node.author._createdAt}
-                            </p>
-                            <Link
-                                to={`https://www.robert.dev/{post.node.slug.current}`}
-                            >
-                                <h3 className="text-xl">{post.node.title}</h3>
+                            <Link to={post.slug.current}>
+                                <WritingCategories
+                                    categoryData={post.categories}
+                                />
+
+                                <h3 className="text-xl">{post.title}</h3>
+                                <WritingBody bodyData={post.body} />
                             </Link>
-                            {/* <p className="text-lg">{post.node.children.body}</p> */}
                         </div>
                     ))}
                 </div>
