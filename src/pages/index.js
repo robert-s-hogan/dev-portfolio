@@ -3,38 +3,30 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
-import WritingCategories from "../components/writing-categories.js";
-import WritingBody from "../components/writing-body.js";
+// import WritingCategories from "../components/writing-categories.js";
+// import WritingBody from "../components/writing-body.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
-        query AllPosts {
-            allSanityPost {
+        query ProjectData {
+            allSanityProject {
                 nodes {
-                    title
-                    slug {
-                        current
-                    }
-                    _createdAt(formatString: "DD MMMM, YYYY")
                     id
-                    categories {
-                        title
+                    description
+                    repoUrl
+                    title
+                    url
+                    techUsed {
                         id
-                    }
-                    body {
-                        children {
-                            text
-                        }
-                        _key
+                        description
+                        title
+                        imageUrl
                     }
                 }
             }
         }
     `);
-    const posts = data.allSanityPost.nodes;
-
-    console.log(posts);
-
+    const projects = data.allSanityProject.nodes;
     return (
         <Layout>
             <section
@@ -66,16 +58,18 @@ export default function IndexPage() {
                     Featured Projects &mdash;
                 </h2>
                 <div className="flex flex-wrap md:space-x-2 px-4">
-                    <ProjectCard
-                        projectName="API Pagination"
-                        react="true"
-                        typescript="true"
-                        css="true"
-                        git="https://github.com/robert-s-hogan/react-query-pagination-assessment"
-                        url="https://robert-s-hogan.github.io/react-query-pagination-assessment/"
-                        projectDescription=" This project consumes a 3rd party API and creates pagination to view all entries."
-                    ></ProjectCard>
-                    <ProjectCard
+                    {projects.map(project => (
+                        <ProjectCard
+                            // data={project}
+                            key={project.id}
+                            projectName={project.title}
+                            techUsed={project.techUsed}
+                            git={project.repoUrl}
+                            url={project.url}
+                            projectDescription={project.description}
+                        />
+                    ))}
+                    {/* <ProjectCard
                         projectName="Game of Memory"
                         javascript="true"
                         css="true"
@@ -99,10 +93,10 @@ export default function IndexPage() {
                         code="true"
                         projectDescription="Various projects and tutorials using different technologies."
                         buttonTitle="View Projects"
-                    ></ProjectCard>
+                    ></ProjectCard> */}
                 </div>
             </section>
-            <section
+            {/* <section
                 id="posts"
                 className="max-w-7xl mx-auto text-white dark:text-black pl-4 mt-8 "
             >
@@ -127,7 +121,7 @@ export default function IndexPage() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
         </Layout>
     );
 }

@@ -67,8 +67,8 @@ module.exports = {
         {
             resolve: "gatsby-source-sanity",
             options: {
-                projectId: "cruda0lx",
-                dataset: "production",
+                projectId: "4qlup7ai",
+                dataset: "projects",
             },
         },
         "gatsby-plugin-postcss",
