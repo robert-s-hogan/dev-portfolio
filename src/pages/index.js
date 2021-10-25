@@ -3,8 +3,6 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
-// import WritingCategories from "../components/writing-categories.js";
-// import WritingBody from "../components/writing-body.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
@@ -60,7 +58,6 @@ export default function IndexPage() {
                 <div className="flex flex-wrap md:space-x-2 px-4">
                     {projects.map(project => (
                         <ProjectCard
-                            // data={project}
                             key={project.id}
                             projectName={project.title}
                             techUsed={project.techUsed}

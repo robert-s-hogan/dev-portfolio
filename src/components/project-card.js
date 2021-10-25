@@ -16,18 +16,11 @@ export default function ProjectCard({
         <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
             <div className={`flex justify-end ${git ? "" : "mb-2"}`}>
                 <a href={git} className="self-center mb-4">
-                    {git ? (
+                    {git && (
                         <img
                             src="https://img.icons8.com/material-outlined/36/FFFFFF/github.png"
                             alt="Github Logo"
                             className="self-center pr-2"
-                        />
-                    ) : (
-                        <StaticImage
-                            src="../images/all_projects.svg"
-                            alt="Dashboard Icon"
-                            className="self-center mr-2 mb-1"
-                            height={20}
                         />
                     )}
                 </a>
@@ -47,80 +40,6 @@ export default function ProjectCard({
                         />
                     </div>
                 ))}
-                {/* {tech.title ? 'React' && (
-                        <div className="mr-2">
-                            <StaticImage
-                                alt="React Logo"
-                                height={48}
-                                placeholder="dominantColor"
-                                src="../images/react-logo.svg"
-                            />
-                        </div>
-                    )}
-                    {gatsby && (
-                        <div className="mr-2">
-                            <StaticImage
-                                alt="Gatsby Logo"
-                                placeholder="dominantColor"
-                                src="../images/Gatsby_Monogram.svg"
-                                height={22}
-                            />
-                        </div>
-                    )}
-                    {typescript && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={22}
-                                alt="Typescript Logo"
-                                src="../images/typescriptlang-icon.svg"
-                            />
-                        </div>
-                    )}
-                    {javascript && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={22}
-                                alt="JavaScript Logo"
-                                src="../images/javascript_logo.svg"
-                            />
-                        </div>
-                    )}
-                    {tailwindcss && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={22}
-                                alt="TailwindCSS Logo"
-                                src="../images/tailwindcss_logo.svg"
-                            />
-                        </div>
-                    )}
-                    {css && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={22}
-                                alt="CSS3 Logo"
-                                src="../images/css_logo.svg"
-                            />
-                        </div>
-                    )}
-                    {netlify && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={20}
-                                alt="CSS3 Logo"
-                                src="../images/netlify_logo.svg"
-                            />
-                        </div>
-                    )}
-                    {code && (
-                        <div className="mr-2">
-                            <StaticImage
-                                height={20}
-                                alt="CSS3 Logo"
-                                src="../images/code.svg"
-                            />
-                        </div>
-                    )} */}
             </div>
 
             {url && (
