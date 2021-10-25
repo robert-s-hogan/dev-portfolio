@@ -69,31 +69,42 @@ export default function IndexPage() {
                             projectDescription={project.description}
                         />
                     ))}
-                    {/* <ProjectCard
-                        projectName="Game of Memory"
-                        javascript="true"
-                        css="true"
-                        git="https://github.com/robert-s-hogan/Project-Memory-Game"
-                        url="https://robert-s-hogan.github.io/Project-Memory-Game/"
-                        projectDescription="This project was made with Vanilla JavaScript and designed assets."
-                    ></ProjectCard>
-                    <ProjectCard
-                        projectName="Coffee Shop"
-                        react="true"
-                        gatsby="true"
-                        netlify="true"
-                        git="https://github.com/robert-s-hogan/gatsby-coffee-shop"
-                        url="https://local-coffee-shop-gatsby-tailwind.netlify.app/"
-                        tailwindcss="true"
-                        projectDescription="Generic coffee shop template using TailwindCSS, Gatsby hosted on Netlify."
-                    ></ProjectCard>
-                    <ProjectCard
-                        projectName="Other Projects"
-                        url="/other-projects"
-                        code="true"
-                        projectDescription="Various projects and tutorials using different technologies."
-                        buttonTitle="View Projects"
-                    ></ProjectCard> */}
+                    <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
+                        <div className="flex justify-end mb-2">
+                            <Link to="/projects" className="self-center mb-4">
+                                <StaticImage
+                                    src="../images/all_projects.svg"
+                                    alt="Dashboard Icon"
+                                    className="self-center mr-2 mb-1"
+                                    height={20}
+                                />
+                            </Link>
+                        </div>
+
+                        <h2 className="text-2xl uppercase">Other Projects</h2>
+                        <p className="text-sm py-4">
+                            Various projects and tutorials using different
+                            technologies.
+                        </p>
+
+                        <div className="flex justify-start mb-2 content-center">
+                            <div className="mr-2">
+                                <StaticImage
+                                    height={20}
+                                    alt="CSS3 Logo"
+                                    src="../images/code.svg"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="mt-4">
+                            <Link to="/projects">
+                                <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
+                                    Live Project
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
             {/* <section
