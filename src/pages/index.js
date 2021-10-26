@@ -41,6 +41,29 @@ export default function IndexPage() {
                         I engineer beatiful websites that are fast, functional
                         and accessible to everyone.
                     </p>
+                    <div className="flex content-center mb-12 space-x-4">
+                        <a
+                            href="https://www.linkedin.com/in/robert-s-hogan/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <StaticImage
+                                src="../images/linkedin.png"
+                                alt="LinkedIn Logo"
+                                className="text-white"
+                                height={24}
+                            />
+                        </a>
+                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                            <StaticImage
+                                alt="email icon"
+                                className="mt-0.5"
+                                placeholder="dominantColor"
+                                src="../images/email_icon.svg"
+                                height={24}
+                            />
+                        </a>
+                    </div>
                 </div>
                 <div className="md:w-1/2 md:flex-1 pl-8 md:pl-0">
                     <StaticImage
@@ -51,7 +74,7 @@ export default function IndexPage() {
                     />
                 </div>
             </section>
-            <section id="featured-projects" className="max-w-7xl mx-auto">
+            <section id="featured-projects" className="max-w-4xl mx-auto">
                 <h2 className="text-sm font-thin uppercase text-white pl-4">
                     Featured Projects &mdash;
                 </h2>
@@ -66,16 +89,20 @@ export default function IndexPage() {
                             projectDescription={project.description}
                         />
                     ))}
-                    <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
+                    {/* <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
                         <div className="flex justify-end mb-2">
-                            <Link to="/projects" className="self-center mb-4">
-                                <StaticImage
-                                    src="../images/all_projects.svg"
-                                    alt="Dashboard Icon"
-                                    className="self-center mr-2 mb-1"
-                                    height={20}
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://github.com/robert-s-hogan"
+                                className="self-center mb-4"
+                            >
+                                <img
+                                    src="https://img.icons8.com/material-outlined/36/FFFFFF/github.png"
+                                    alt="Github Logo"
+                                    className="self-center pr-2"
                                 />
-                            </Link>
+                            </a>
                         </div>
 
                         <h2 className="text-2xl uppercase">Other Projects</h2>
@@ -101,6 +128,50 @@ export default function IndexPage() {
                                 </button>
                             </Link>
                         </div>
+                    </div> */}
+                </div>
+            </section>
+            <section
+                id="about"
+                className="max-w-4xl mx-auto pl-4 text-white md:flex mt-12 md:space-x-8"
+            >
+                <div className="md:w-1/2">
+                    <h2 className="text-sm font-thin uppercase mb-2">
+                        About Me &mdash;
+                    </h2>
+                    <p>
+                        I enjoy turning complex problems into simple, beautiful
+                        and intuitive designs. When I'm not pushing pixels,
+                        you'll find me gaming, watching football(and futbol) or
+                        hanging out with my family.
+                    </p>
+                </div>
+
+                <div id="contact" className="w-1/2 mt-4 md:mt-0">
+                    <h2 className="text-sm font-thin uppercase text-white mb-2">
+                        Contact &mdash;
+                    </h2>
+                    <div className="flex content-center md:mb-12 space-x-4">
+                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                            <StaticImage
+                                alt="email icon"
+                                placeholder="dominantColor"
+                                src="../images/email_icon.svg"
+                                height={24}
+                            />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/robert-s-hogan/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <StaticImage
+                                src="../images/linkedin.png"
+                                alt="LinkedIn Logo"
+                                className="text-white mb-8"
+                                height={24}
+                            />
+                        </a>
                     </div>
                 </div>
             </section>

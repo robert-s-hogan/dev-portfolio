@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
 export default function ProjectCard({
     children,
@@ -15,7 +13,12 @@ export default function ProjectCard({
     return (
         <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
             <div className={`flex justify-end ${git ? "" : "mb-2"}`}>
-                <a href={git} className="self-center mb-4">
+                <a
+                    href={git}
+                    className="self-center mb-4"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     {git && (
                         <img
                             src="https://img.icons8.com/material-outlined/36/FFFFFF/github.png"
@@ -34,7 +37,7 @@ export default function ProjectCard({
                     <div className="mr-2" key={tech.id}>
                         <img
                             alt={tech.description}
-                            className="h-8"
+                            className="h-6"
                             placeholder="dominantColor"
                             src={tech.imageUrl}
                         />
@@ -44,7 +47,7 @@ export default function ProjectCard({
 
             {url && (
                 <div className="mt-4">
-                    <a href={url}>
+                    <a href={url} target="_blank" rel="noreferrer">
                         <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
                             {buttonTitle ? buttonTitle : "Live Project"}
                         </button>

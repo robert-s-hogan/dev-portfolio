@@ -79,7 +79,7 @@ export function Layout({
                             Home
                         </Link>
                         <Link
-                            to="/about"
+                            to="/#about"
                             className="font-bold py-3 text-4xl text-black"
                         >
                             About
@@ -90,7 +90,7 @@ export function Layout({
                     <ul className="md:flex">
                         <li>
                             <Link
-                                to="#projects"
+                                to="/#featured-projects"
                                 className="pr-3 uppercase text-white text-sm inline-block align-middle"
                             >
                                 Projects
@@ -98,10 +98,18 @@ export function Layout({
                         </li>
                         <li>
                             <Link
-                                to="#about"
-                                className="pr-3 lg:pr-0 uppercase text-white text-sm inline-block align-middle"
+                                to="/#about"
+                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
                             >
                                 About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/#contact"
+                                className="pr-3 lg:pr-0 uppercase text-white text-sm inline-block align-middle"
+                            >
+                                Contact
                             </Link>
                         </li>
                     </ul>
@@ -109,38 +117,7 @@ export function Layout({
             </header>
             <main className="mx-auto mb-8">{children}</main>
             <footer className="mx-auto font-thin text-white max-w-7xl pl-4">
-                <section id="contact" className="max-w-7xl mx-auto">
-                    <h2 className="text-sm font-thin uppercase text-white mb-1">
-                        Contact &mdash;
-                    </h2>
-                    <div className="flex content-center mb-12 space-x-4">
-                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
-                            <StaticImage
-                                alt="email icon"
-                                placeholder="dominantColor"
-                                src="../images/email_icon.svg"
-                                height={24}
-                            />
-                        </a>
-                        <a href="https://www.linkedin.com">
-                            <StaticImage
-                                src="../images/linkedin.png"
-                                alt="LinkedIn Logo"
-                                className="text-white mb-8"
-                                height={24}
-                            />
-                        </a>
-                        <a href="https://www.linkedin.com">
-                            <StaticImage
-                                src="../images/twitter_logo.svg"
-                                alt="LinkedIn Logo"
-                                className="text-white dark:text-black mb-8"
-                                height={24}
-                            />
-                        </a>
-                    </div>
-                </section>
-                <p className="dark:text-black">&copy; 2021 Robert Hogan</p>
+                <p className="text-sm pb-3">&copy; 2021 Robert Hogan</p>
             </footer>
         </div>
     );
