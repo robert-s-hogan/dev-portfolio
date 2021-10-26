@@ -97,7 +97,7 @@ export default function IndexPage() {
                         <div className="mt-4">
                             <Link to="/projects">
                                 <button className="bg-transparent hover:bg-white hover:text-black py-2 px-4 border-2 transition duration-300 ease-in-out">
-                                    Live Project
+                                    All Projects{" "}
                                 </button>
                             </Link>
                         </div>

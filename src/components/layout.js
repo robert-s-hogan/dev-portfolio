@@ -38,7 +38,7 @@ export function Layout({
         "bg-gray-800 h-screen w-60 transform transition-all fixed duration-700 text-white flex justify-center p-2 -translate-y-full";
 
     return (
-        <div className="bg-gray-900 dark:bg-black">
+        <div className="dark:bg-gray-900 bg-black">
             <Seo
                 title={title}
                 description={description}
