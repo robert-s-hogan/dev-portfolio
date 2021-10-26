@@ -116,7 +116,7 @@ export function Layout({
                 </div>
             </header>
             <main className="mx-auto mb-8">{children}</main>
-            <footer className="mx-auto font-thin text-white max-w-7xl pl-4">
+            <footer className="mx-auto font-thin text-white max-w-4xl pl-4">
                 <p className="text-sm pb-3">&copy; 2021 Robert Hogan</p>
             </footer>
         </div>
