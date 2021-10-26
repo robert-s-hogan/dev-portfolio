@@ -57,12 +57,12 @@ export function Layout({
                     {/* <button className="mr-8" id="switchTheme">
                         DarkLight
                     </button> */}
-                    <Hamburger
+                    {/* <Hamburger
                         id="nav_toggle"
                         aria-label="Mobile Navigation"
                         navbarOpen={navbarOpen}
                         setNavbarOpen={setNavbarOpen}
-                    />
+                    /> */}
                 </nav>
                 {
                     <div
