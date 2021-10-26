@@ -11,7 +11,7 @@ export default function ProjectCard({
     techUsed,
 }) {
     return (
-        <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
+        <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain px-4 md:bg-black justify-center text-white py-8 md:px-8 border border my-2">
             <div className={`flex justify-end ${git ? "" : "mb-2"}`}>
                 <a
                     href={git}

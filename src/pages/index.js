@@ -78,7 +78,7 @@ export default function IndexPage() {
                 <h2 className="text-sm font-thin uppercase text-white pl-4">
                     Featured Projects &mdash;
                 </h2>
-                <div className="flex flex-wrap md:space-x-2 px-4">
+                <div className="flex flex-wrap md:space-x-2 px-4 md:pr-0">
                     {projects.map(project => (
                         <ProjectCard
                             key={project.id}
@@ -133,46 +133,43 @@ export default function IndexPage() {
             </section>
             <section
                 id="about"
-                className="max-w-4xl mx-auto pl-4 text-white md:flex mt-12 md:space-x-8"
+                className="max-w-4xl mx-auto pl-4 text-white mt-12 mb-4"
             >
-                <div className="md:w-1/2">
-                    <h2 className="text-sm font-thin uppercase mb-2">
-                        About Me &mdash;
-                    </h2>
-                    <p>
-                        I enjoy turning complex problems into simple, beautiful
-                        and intuitive designs. When I'm not pushing pixels,
-                        you'll find me gaming, watching football(and futbol) or
-                        hanging out with my family.
-                    </p>
-                </div>
-
-                <div id="contact" className="w-1/2 mt-4 md:mt-0">
-                    <h2 className="text-sm font-thin uppercase text-white mb-2">
-                        Contact &mdash;
-                    </h2>
-                    <div className="flex content-center md:mb-12 space-x-4">
-                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
-                            <StaticImage
-                                alt="email icon"
-                                placeholder="dominantColor"
-                                src="../images/email_icon.svg"
-                                height={24}
-                            />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/robert-s-hogan/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <StaticImage
-                                src="../images/linkedin.png"
-                                alt="LinkedIn Logo"
-                                className="text-white mb-8"
-                                height={24}
-                            />
-                        </a>
-                    </div>
+                <h2 className="text-sm font-thin uppercase mb-2">
+                    About Me &mdash;
+                </h2>
+                <p>
+                    I enjoy turning complex problems into simple, beautiful and
+                    intuitive designs. When I'm not pushing pixels, you'll find
+                    me gaming, watching football(and futbol) or hanging out with
+                    my family.
+                </p>
+            </section>
+            <section id="contact" className="max-w-4xl mx-auto pl-4 mt-12">
+                <h2 className="text-sm font-thin uppercase text-white mb-2">
+                    Contact &mdash;
+                </h2>
+                <div className="flex content-center md:mb-12 space-x-4">
+                    <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                        <StaticImage
+                            alt="email icon"
+                            placeholder="dominantColor"
+                            src="../images/email_icon.svg"
+                            height={24}
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/robert-s-hogan/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <StaticImage
+                            src="../images/linkedin.png"
+                            alt="LinkedIn Logo"
+                            className="text-white mb-8"
+                            height={24}
+                        />
+                    </a>
                 </div>
             </section>
             {/* <section
