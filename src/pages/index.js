@@ -41,7 +41,7 @@ export default function IndexPage() {
                         I engineer beatiful websites that are fast, functional
                         and accessible to everyone.
                     </p>
-                    <div className="flex content-center md:mb-12 space-x-4">
+                    <div className="flex content-center mb-2 md:mb-12 space-x-4">
                         <a
                             href="https://www.linkedin.com/in/robert-s-hogan/"
                             target="_blank"
