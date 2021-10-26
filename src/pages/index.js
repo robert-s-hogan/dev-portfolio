@@ -37,7 +37,7 @@ export default function IndexPage() {
                         focuses on the front-end of the web.
                     </h1>
                     <hr className="w-1/4 mt-4 mb-4" />
-                    <p className="mb-4">
+                    <p className="mb-4 hidden md:block">
                         I engineer beatiful websites that are fast, functional
                         and accessible to everyone.
                     </p>
