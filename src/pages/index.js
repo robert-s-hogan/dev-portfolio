@@ -34,7 +34,7 @@ export default function IndexPage() {
                 <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white">
                     <h1 className="space-mono font-bold text-3xl lg:text-4xl md:leading-relaxed">
                         Robert is a software engineer in California that mostly
-                        focuses on the front-end of the web.
+                        on the front-end.
                     </h1>
                     <hr className="w-1/4 mt-4 mb-4" />
                     <p className="mb-4 hidden md:block">
