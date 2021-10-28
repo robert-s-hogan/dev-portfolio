@@ -1,4 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
+[![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 
@@ -264,5 +264,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/robert-s-hogan/dev-portfolio/blob/main/license.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: www.linkedin.com/in/robert-s-hogan
+[linkedin-url]: https://www.linkedin.com/in/robert-s-hogan
 [product-screenshot]: https://res.cloudinary.com/dmfdjwwgb/image/upload/v1635445056/roberthogan.dev/README/roberthogandev-desktop_t4r0xa.png
