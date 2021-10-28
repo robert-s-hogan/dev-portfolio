@@ -1,4 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][https://github.com/robert-s-hogan/rsh-dev-gatsby-cloud-tailwindcss/graphs/contributors] [![Forks][forks-shield]][https://github.com/robert-s-hogan/rsh-dev-gatsby-cloud-tailwindcss/network/members] [![Stargazers][stars-shield]][https://github.com/robert-s-hogan/rsh-dev-gatsby-cloud-tailwindcss/stargazers] [![Issues][issues-shield]][https://github.com/robert-s-hogan/rsh-dev-gatsby-cloud-tailwindcss/issues] [![MIT License][license-shield]][license-url] [![LinkedIn][linkedin-shield]][linkedin-url]
   
   
 
