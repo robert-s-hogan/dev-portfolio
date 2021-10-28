@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
 import { Seo } from "./seo.js";
-import Hamburger from "./hamburger.js";
+// import Hamburger from "./hamburger.js";
 
 import "../styles/global.css";
 
@@ -30,6 +30,7 @@ export function Layout({
 
     const meta = data?.site?.siteMetadata ?? {};
 
+    console.log(meta);
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     const activeSide =
@@ -40,9 +41,9 @@ export function Layout({
     return (
         <div className="dark:bg-gray-900 bg-black">
             <Seo
-                title={title}
-                description={description}
-                image={image}
+                title={meta.title}
+                description={meta.description}
+                image={meta.image}
                 path={path}
             />
             <header className="flex justify-between text-white p-4 lg:px-0 text-2xl max-w-4xl mx-auto">
