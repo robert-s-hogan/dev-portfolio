@@ -178,15 +178,19 @@ Usage is to create a simple easy to manage portfolio. Once you set up your Sanit
 
 ## Roadmap
 
--   [] Dark and Light mode toggle
+-   [] [Dark and Light mode toggle](https://github.com/robert-s-hogan/dev-portfolio/issues/11)
 
--   [] Newsletter and services
+-   [] [Blog from Sanity.io](https://github.com/robert-s-hogan/dev-portfolio/issues/10)
 
--   [] Shopify shop with swag
+-   [] [Newsletter and services](https://github.com/robert-s-hogan/dev-portfolio/issues/7)
 
--   [] Tips and tricks PDF download
+-   [] [Shopify shop with swag](https://github.com/robert-s-hogan/dev-portfolio/issues/8)
 
--   [] Multi-language Support
+-   [] [Set up YouTube channel with tutorials](https://github.com/robert-s-hogan/dev-portfolio/issues/2)
+
+-   [] [Tips and tricks PDF download](https://github.com/robert-s-hogan/dev-portfolio/issues/12)
+
+-   [] [Multi-language Support](https://github.com/robert-s-hogan/dev-portfolio/issues/9)
 
 See the [open issues](https://github.com/robert-s-hogan/dev-portfolio/issues) for a full list of proposed features (and known issues).
 
