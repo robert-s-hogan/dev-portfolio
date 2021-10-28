@@ -86,9 +86,9 @@ An awesome README template to jumpstart your projects!
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-I wanted to update my portfolio from a traditional hosted site, i used Dreamhost, to a web application. I ended up landing using React, Gatsby, Sanity and Netlify.
+I wanted to update my portfolio from a traditional hosted site (Dreamhost.com) to a web application. I ended up using ReactJS, GatsbyJS, Sanity.io and Netlify.
 
-Putting this project together was a great introduction to JS frameworks, npm and the terminal. Before this project, I spent most of my professional time within a CMS.
+Putting this project together was a great introduction to JS frameworks, npm and the terminal. Before this project, I spent most of my professional time within a CMS. I wanted to challenge myself and use some amazing tools to increase my productivity.
 
 I'm really exicted to share the project!
 
