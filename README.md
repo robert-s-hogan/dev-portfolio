@@ -96,16 +96,17 @@ Here's why:
 
 -   JAMStack sites are incredible. I spent very little time connecting services and most of my time developing.
 
--   Traditional Website applications are too slow. Network requests that bog down performance.
+-   Traditional Website applications are too slow. Network requests and 3rd party services really degrade the website experience.
 
--   Of course to showcase my skills as a JavaScript developer and frontend engineer!
+-   Finally, to showcase my skills as a JavaScript developer and frontend engineer!
 
 <p  align="right">(<a  href="#top">back to top</a>)</p>
 
 ### Built With
 
--   [Github](https://github.com/) - Handles code and used to connect to Sanity and Netlify
--   [React.js](https://reactjs.org/) - Handled user interface and components
+-   [Github](https://github.com/) - Maintains code and used to connect to Sanity and Netlify
+
+-   [React.js](https://reactjs.org/) - Handles user interface and components
 
 -   [Gatsby.js](https://gatsbyjs.org/) - Handles performance, security and accessibility
 
@@ -261,7 +262,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/robert-s-hogan/dev-portfolio/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/robert-s-hogan/dev-portfolio/blob/master/LICENSE.txt
+[license-url]: https://github.com/robert-s-hogan/dev-portfolio/blob/main/license.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/robert-s-hogan
 [product-screenshot]: https://res.cloudinary.com/dmfdjwwgb/image/upload/v1635445056/roberthogan.dev/README/roberthogandev-desktop_t4r0xa.png
