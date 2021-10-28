@@ -135,7 +135,7 @@ npm install npm@latest -g
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Follow these steps to set up a local copy of this project.
 
 1. Clone the repo
 
@@ -169,7 +169,7 @@ gatsby develop
 
 ## Usage
 
-Usage is to create a simple easy to manage portfolio. Once you set up your Sanity dataset and schema, you can easily plug in your content and use this design!
+Usage is to create a simple easy to manage portfolio. Once you set up your Sanity [dataset](https://www.sanity.io/docs/datasets) and [schema](https://www.sanity.io/docs/schema-types), you can easily plug in your content and use this design!
 
 <p  align="right">(<a  href="#top">back to top</a>)</p>
 
@@ -185,7 +185,7 @@ Usage is to create a simple easy to manage portfolio. Once you set up your Sanit
 
 -   [] Multi-language Support
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/robert-s-hogan/dev-portfolio/issues) for a full list of proposed features (and known issues).
 
 <p  align="right">(<a  href="#top">back to top</a>)</p>
 
