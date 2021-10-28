@@ -16,7 +16,7 @@
 
 <p  align="center">
 
-An awesome README template to jumpstart your projects!
+Here is a README if you are interested in checking out my project!
 
 <br  />
 
@@ -176,6 +176,8 @@ Usage is to create a simple easy to manage portfolio. Once you set up your Sanit
 <!-- ROADMAP -->
 
 ## Roadmap
+
+-   [] Dark and Light mode toggle
 
 -   [] Newsletter and services
 
