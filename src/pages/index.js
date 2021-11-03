@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
+// import Posts from "../components/posts.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
@@ -145,6 +146,7 @@ export default function IndexPage() {
                     my family.
                 </p>
             </section>
+            {/* <Posts /> */}
             <section id="contact" className="max-w-4xl mx-auto pl-4 mt-12">
                 <h2 className="text-sm font-thin uppercase text-white mb-2">
                     Contact &mdash;
@@ -172,32 +174,6 @@ export default function IndexPage() {
                     </a>
                 </div>
             </section>
-            {/* <section
-                id="posts"
-                className="max-w-7xl mx-auto text-white dark:text-black pl-4 mt-8 "
-            >
-                <h2 className="text-sm font-thin uppercase text-white mb-2">
-                    Writing &mdash;
-                </h2>
-                <div className="text-white flex">
-                    {posts.map(post => (
-                        <div
-                            key={post.id}
-                            id={post.id}
-                            className="w-1/3 border p-4 mr-2"
-                        >
-                            <Link to={post.slug.current}>
-                                <WritingCategories
-                                    categoryData={post.categories}
-                                />
-
-                                <h3 className="text-xl">{post.title}</h3>
-                                <WritingBody bodyData={post.body} />
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-            </section> */}
         </Layout>
     );
 }

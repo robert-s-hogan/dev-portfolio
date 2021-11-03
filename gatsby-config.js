@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: "https://defaultmultipagegatsbystarterm.gatsbyjs.io/",
+        siteUrl: "https://roberthogan.dev/",
         title: "Frontend Engineer Portfolio | Robert Hogan",
         description:
             "Robert is a software engineer in California that mostly focuses on the front-end of the web. I engineer beatiful websites that are fast, functional and accessible to everyone.",
@@ -69,6 +69,13 @@ module.exports = {
             options: {
                 projectId: "4qlup7ai",
                 dataset: "projects",
+            },
+        },
+        {
+            resolve: "gatsby-source-sanity",
+            options: {
+                projectId: "cruda0lx",
+                dataset: "production",
             },
         },
         "gatsby-plugin-postcss",

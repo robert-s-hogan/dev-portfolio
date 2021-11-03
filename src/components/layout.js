@@ -65,7 +65,7 @@ export function Layout({
                         setNavbarOpen={setNavbarOpen}
                     /> */}
                 </nav>
-                {
+                {/* {
                     <div
                         // ref={tl}
                         id="nav_content"
@@ -86,7 +86,7 @@ export function Layout({
                             About
                         </Link>
                     </div>
-                }
+                } */}
                 <div className="hidden md:block">
                     <ul className="md:flex">
                         <li>
