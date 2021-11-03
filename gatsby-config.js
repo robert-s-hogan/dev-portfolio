@@ -9,19 +9,10 @@ module.exports = {
     plugins: [
         "gatsby-plugin-sitemap",
         "gatsby-plugin-react-helmet",
-        // {
-        //     resolve: "gatsby-plugin-robots-txt",
-        //     options: {
-        //         host: "https://defaultmultipagegatsbystarterm.gatsbyjs.io/",
-        //         sitemap:
-        //             "https://defaultmultipagegatsbystarterm.gatsbyjs.io/sitemap.xml",
-        //         policy: [{ userAgent: "*", allow: "/" }],
-        //     },
-        // },
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: `https://defaultmultipagegatsbystarterm.gatsbyjs.io/`,
+                siteUrl: `https://roberthogan.dev/`,
             },
         },
         {
