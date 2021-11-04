@@ -40,6 +40,8 @@ export default function ProjectCard({
                             className="h-6"
                             placeholder="dominantColor"
                             src={tech.imageUrl}
+                            height={27}
+                            width={27}
                         />
                     </div>
                 ))}
