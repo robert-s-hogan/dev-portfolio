@@ -36,12 +36,12 @@ export default function IndexPage() {
                     <p className="text-xl font-light">
                         Hello, I am Robert Hogan
                     </p>
-                    <h1 className="space-mono text-3xl font-light lg:text-4xl md:leading-relaxed">
+                    <h1 className="space-mono text-3xl font-light lg:text-5xl md:leading-relaxed">
                         <span className="font-bold">Front End Developer</span>{" "}
                         and <span className="font-bold">UI/UX Engineer</span>
                     </h1>
                     <hr className="w-1/4 mt-4 mb-4" />
-                    <p className="mb-4 hidden md:block">
+                    <p className="mb-4 hidden md:block font-light">
                         I engineer beatiful websites that are fast, functional
                         and accessible to everyone.
                     </p>
