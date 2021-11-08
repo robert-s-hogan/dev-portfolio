@@ -92,7 +92,7 @@ export function Layout({
                         <li>
                             <Link
                                 to="/#featured-projects"
-                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
+                                className="pr-3 text-white text-sm inline-block align-middle"
                             >
                                 Projects
                             </Link>
@@ -100,7 +100,7 @@ export function Layout({
                         <li>
                             <Link
                                 to="/#about"
-                                className="pr-3 uppercase text-white text-sm inline-block align-middle"
+                                className="pr-3 text-white text-sm inline-block align-middle"
                             >
                                 About
                             </Link>
@@ -108,7 +108,7 @@ export function Layout({
                         <li>
                             <Link
                                 to="/#contact"
-                                className="pr-3 lg:pr-0 uppercase text-white text-sm inline-block align-middle"
+                                className="pr-3 lg:pr-0 text-white text-sm inline-block align-middle"
                             >
                                 Contact
                             </Link>
