@@ -152,7 +152,7 @@ export default function IndexPage() {
                     Contact &mdash;
                 </h2>
                 <div className="flex content-center md:mb-12 space-x-4">
-                    <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                    <a href="mailto:robert.s.hogan@icloud.com?subject=Contact Section: Inquiry">
                         <StaticImage
                             alt="email icon"
                             placeholder="dominantColor"
