@@ -49,7 +49,7 @@ export function Layout({
             <header className="flex justify-between text-white p-4 lg:px-0 text-2xl max-w-4xl mx-auto">
                 <Link to="/">
                     <div className="flex items-center justify-center">
-                        <p className="uppercase text-2xl font-bold tracking-widest">
+                        <p className="uppercase text-3xl lg:text-5xl font-bold tracking-widest">
                             RH
                         </p>
                     </div>
