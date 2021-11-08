@@ -55,7 +55,7 @@ export default function IndexPage() {
                                 height={24}
                             />
                         </a>
-                        <a href="mailto:robert@robertshogan.com?subject=Contact Section: Inquiry">
+                        <a href="mailto:robert.s.hogan@icloud.com?subject=Contact Section: Inquiry">
                             <StaticImage
                                 alt="email icon"
                                 className="mt-0.5"
