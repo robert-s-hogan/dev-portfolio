@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import BlockContent from "@sanity/block-content-to-react";
+import Layout from "../components/layout.js";
 
 const client = require("@sanity/client")({
     projectId: "cruda0lx",
@@ -21,7 +22,7 @@ const serializers = {
 
 export default function Posts({ title, description }) {
     const data = useStaticQuery(graphql`
-        query PostData {
+        query BlogData {
             allSanityPost {
                 nodes {
                     author {
@@ -53,37 +54,39 @@ export default function Posts({ title, description }) {
     console.log(posts);
 
     return (
-        <section
-            id="posts"
-            className="max-w-4xl mx-auto text-white dark:text-black pl-4 mt-8 "
-        >
-            <h2 className="text-sm font-thin uppercase text-white mb-2">
-                Writing &mdash;
-            </h2>
-            <p className="text-white mb-4">
-                An open collection of notes, resources, workshops, courses, and
-                explorations into new technologies.
-            </p>
-            <div className="text-white flex">
-                {posts.map(post => (
-                    <div
-                        key={post.id}
-                        id={post.id}
-                        className="w-1/3 border p-4 mr-2"
-                    >
-                        <Link to={`post/${post.slug.current}`}>
-                            <p>{post.title}</p>
-                            <p className="text-gray-200 text-xs">
-                                {post.author}
-                            </p>
-                            {/* <BlockContent
+        <Layout title={title} description={description}>
+            <section
+                id="posts"
+                className="max-w-4xl mx-auto text-white dark:text-black pl-4 mt-8 "
+            >
+                <h2 className="text-sm font-thin uppercase text-white mb-2">
+                    Writing &mdash;
+                </h2>
+                <p>
+                    An open collection of notes, resources, workshops, courses,
+                    and explorations into new technologies.
+                </p>
+                <div className="text-white flex">
+                    {posts.map(post => (
+                        <div
+                            key={post.id}
+                            id={post.id}
+                            className="w-1/3 border p-4 mr-2"
+                        >
+                            <Link to={post.slug.current}>
+                                <p>{post.title}</p>
+                                <p className="text-gray-200 text-xs">
+                                    {post.author}
+                                </p>
+                                {/* <BlockContent
                             blocks={post.body}
                             serializers={serializers}
                         /> */}
-                        </Link>
-                    </div>
-                ))}
-            </div>
-        </section>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </Layout>
     );
 }

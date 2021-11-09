@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
-// import Posts from "../components/posts.js";
+import Posts from "../components/posts.js";
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
