@@ -1,5 +1,5 @@
 export default {
-    name: "category",
+    name: "techUsed",
     title: "Tech Used",
     type: "document",
     fields: [

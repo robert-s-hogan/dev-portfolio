@@ -32,14 +32,14 @@ export default {
             },
         },
         {
-            name: "categories",
-            title: "Categories",
+            name: "techUsed",
+            title: "techUsed",
             type: "array",
-            of: [{ type: "reference", to: { type: "category" } }],
+            of: [{ type: "reference", to: { type: "techUsed" } }],
         },
         {
             name: "collection",
-            title: "Collection",
+            title: "Collections",
             type: "array",
             of: [{ type: "reference", to: { type: "collection" } }],
         },
