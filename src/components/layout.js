@@ -30,7 +30,6 @@ export function Layout({
 
     const meta = data?.site?.siteMetadata ?? {};
 
-    console.log(meta);
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     const activeSide =
