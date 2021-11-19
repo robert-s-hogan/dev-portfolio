@@ -33,10 +33,10 @@ export default function IndexPage() {
                 className="max-w-4xl pl-4 mx-auto flex relative pb-12"
             >
                 <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white">
-                    <p className="text-xl font-light">
+                    <p className="text-xl font-normal lg:font-light">
                         Hello, I am Robert Hogan
                     </p>
-                    <h1 className="space-mono text-3xl font-light lg:text-5xl md:leading-relaxed">
+                    <h1 className="space-mono text-3xl font-normal lg:font-light lg:text-5xl md:leading-relaxed">
                         <span className="font-bold">Front End Developer</span>{" "}
                         and <span className="font-bold">UI/UX Engineer</span>
                     </h1>
