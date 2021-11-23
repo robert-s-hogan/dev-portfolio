@@ -74,7 +74,7 @@ export default function IndexPage() {
                         placeholder="dominantColor"
                         alt="Robert Hogan's Portrait Image"
                         src="https://res.cloudinary.com/dmfdjwwgb/image/upload/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg"
-                        height={1024}
+                        height={765}
                     />
                 </div>
             </section>
