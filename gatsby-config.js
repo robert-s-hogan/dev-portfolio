@@ -47,6 +47,7 @@ module.exports = {
             options: {
                 projectId: "4qlup7ai",
                 dataset: "projects",
+                watchMode: "true",
             },
         },
         {

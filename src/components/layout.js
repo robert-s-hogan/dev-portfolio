@@ -68,7 +68,7 @@ export function Layout({
                     <div
                         // ref={tl}
                         id="nav_content"
-                        className={`h-full w-full fixed right-0 bg-white -mt-4 z-20 overflow-hidden flex flex-col justify-center w-auto py-0 items-center md:visible ${
+                        className={`h-full w-full fixed right-0 bg-white -mt-4 z-20 overflow-hidden flex flex-col justify-center py-0 items-center md:visible ${
                             navbarOpen ? activeSide : hiddenSide
                         }`}
                     >
@@ -102,6 +102,14 @@ export function Layout({
                                 className="pr-3 text-white text-sm inline-block align-middle"
                             >
                                 About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/#writing"
+                                className="pr-3 text-white text-sm inline-block align-middle"
+                            >
+                                Writing
                             </Link>
                         </li>
                         <li>

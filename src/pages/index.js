@@ -32,7 +32,7 @@ export default function IndexPage() {
                 id="hero"
                 className="max-w-4xl pl-4 mx-auto flex relative pb-12"
             >
-                <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white">
+                <div className="md:w-1/2 md:flex-1 absolute md:relative z-10 self-end md:self-center text-white bg-blend-darken">
                     <p className="text-xl font-normal lg:font-light">
                         Hello, I am Robert Hogan
                     </p>
@@ -72,8 +72,8 @@ export default function IndexPage() {
                 <div className="md:w-1/2 md:flex-1 pl-8 md:pl-0">
                     <StaticImage
                         placeholder="dominantColor"
-                        alt="Robert Hogan's Portrait Image"
-                        src="https://res.cloudinary.com/dmfdjwwgb/image/upload/v1630950348/robertshogan.com/J_R___T_8.21.21-31_copy_k9zia3.jpg"
+                        alt="Robert Hogan's Portrait"
+                        src="https://rshogan.imgix.net/personal/img/J_R___T_8.21.21-31_copy_k9zia3.jpg?auto=compress,format&h=765"
                         height={765}
                     />
                 </div>
@@ -93,7 +93,7 @@ export default function IndexPage() {
                             projectDescription={project.description}
                         />
                     ))}
-                    {/* <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border border my-2">
+                    {/* <div className="flex flex-col w-full md:flex-1 bg-cover bg-center md:mx-auto md:bg-contain md:bg-black justify-center text-white px-4 py-8 md:px-8 border my-2">
                         <div className="flex justify-end mb-2">
                             <a
                                 target="_blank"
@@ -149,7 +149,7 @@ export default function IndexPage() {
                     my family.
                 </p>
             </section>
-            {/* <Posts /> */}
+            <Posts />
             <section id="contact" className="max-w-4xl mx-auto pl-4 mt-12">
                 <h2 className="text-sm font-thin uppercase text-white mb-2">
                     Contact &mdash;
