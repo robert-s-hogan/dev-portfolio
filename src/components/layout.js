@@ -104,14 +104,14 @@ export function Layout({
                                 About
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 to="/#writing"
                                 className="pr-3 text-white text-sm inline-block align-middle"
                             >
                                 Writing
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link
                                 to="/#contact"

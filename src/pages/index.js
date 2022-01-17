@@ -149,7 +149,7 @@ export default function IndexPage() {
                     my family.
                 </p>
             </section>
-            <Posts />
+            {/* <Posts /> */}
             <section id="contact" className="max-w-4xl mx-auto pl-4 mt-12">
                 <h2 className="text-sm font-thin uppercase text-white mb-2">
                     Contact &mdash;

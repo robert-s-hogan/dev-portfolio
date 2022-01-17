@@ -7,9 +7,10 @@ export default function Blog({ title, description }) {
         query BlogData {
             allSanityPost(sort: { fields: [publishedAt], order: DESC }) {
                 nodes {
-                    author {
-                        id
-                        name
+                    authors {
+                        _key
+                        _type
+                        _rawAuthor
                     }
                     publishedAt(formatString: "MMM DD, YY")
                     title
@@ -24,12 +25,7 @@ export default function Blog({ title, description }) {
                             marks
                         }
                     }
-                    collection {
-                        description
-                        title
-                    }
                     id
-                    excerpt
                     mainImage {
                         asset {
                             path

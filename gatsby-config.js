@@ -53,7 +53,7 @@ module.exports = {
         {
             resolve: "gatsby-source-sanity",
             options: {
-                projectId: "cruda0lx",
+                projectId: "auacvxvt",
                 dataset: "production",
             },
         },

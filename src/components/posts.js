@@ -1,14 +1,16 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import PortableText from "@sanity/block-content-to-react";
 
 export default function Posts({ title, description }) {
     const data = useStaticQuery(graphql`
         query PostData {
             allSanityPost(sort: { fields: [publishedAt], order: DESC }) {
                 nodes {
-                    author {
-                        id
-                        name
+                    authors {
+                        _key
+                        _type
+                        _rawAuthor
                     }
                     publishedAt(formatString: "MMM DD, YY")
                     title
@@ -23,12 +25,7 @@ export default function Posts({ title, description }) {
                             marks
                         }
                     }
-                    collection {
-                        description
-                        title
-                    }
                     id
-                    excerpt
                     mainImage {
                         asset {
                             path

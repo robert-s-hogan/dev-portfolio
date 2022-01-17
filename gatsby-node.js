@@ -10,22 +10,10 @@ exports.createPages = async ({ graphql, actions }) => {
                         slug {
                             current
                         }
-                        collection {
-                            title
-                            description
-                        }
                         body {
-                            children {
-                                text
-                            }
-                            style
-                            list
+                            _rawChildren
                         }
                         publishedAt(formatString: "MMM DD, YY")
-                        techUsed {
-                            title
-                            description
-                        }
                         mainImage {
                             asset {
                                 path
@@ -42,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     const projects = result.data.allSanityPost.edges || [];
+
     projects.forEach((edge, index) => {
         const path = `/post/${edge.node.slug.current}`;
 
@@ -52,10 +41,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 title: edge.node.title,
                 slug: edge.node.slug.current,
                 publishedAt: edge.node.publishedAt,
-                techUsed: edge.node.title,
-                techUsedDescription: edge.node.description,
                 image: `https://cdn.sanity.io/${edge.node.mainImage.asset.path}`,
-                text: edge.node,
+                blogContent: edge.node,
             },
         });
     });
