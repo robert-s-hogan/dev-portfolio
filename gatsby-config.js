@@ -27,9 +27,9 @@ module.exports = {
                         },
                     },
                 ],
-                defaultLayouts: {
-                    posts: require.resolve("./src/components/posts-layout.js"),
-                },
+                // defaultLayouts: {
+                //     posts: require.resolve("./src/components/posts-layout.js"),
+                // },
             },
         },
         {
@@ -48,13 +48,6 @@ module.exports = {
                 projectId: "4qlup7ai",
                 dataset: "projects",
                 watchMode: "true",
-            },
-        },
-        {
-            resolve: "gatsby-source-sanity",
-            options: {
-                projectId: "auacvxvt",
-                dataset: "production",
             },
         },
         "gatsby-plugin-postcss",
