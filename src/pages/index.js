@@ -5,7 +5,7 @@ import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
 import ReactGA from "react-ga";
 ReactGA.initialize("G-Q7HR2Q297C");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.pageview("/");
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
