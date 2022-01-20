@@ -28,7 +28,7 @@ export default function IndexPage() {
         }
     `);
     const projects = data.allSanityProject.nodes;
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview("/");
 
     return (
         <Layout>
