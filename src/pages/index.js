@@ -7,8 +7,6 @@ import ProjectCard from "../components/project-card.js";
 import ReactGA from "react-ga";
 ReactGA.initialize("G-9QZZ3BFWQT");
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
         query ProjectData {
@@ -30,6 +28,8 @@ export default function IndexPage() {
         }
     `);
     const projects = data.allSanityProject.nodes;
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     return (
         <Layout>
             <section
