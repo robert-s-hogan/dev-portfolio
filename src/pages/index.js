@@ -4,8 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
 import ReactGA from "react-ga";
-ReactGA.initialize("G-Q7HR2Q297C");
-ReactGA.pageview("/");
 
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
@@ -28,6 +26,15 @@ export default function IndexPage() {
         }
     `);
     const projects = data.allSanityProject.nodes;
+
+    setGA = () => {
+        ReactGA.initialize('G-Q7HR2Q297C');
+        ReactGA.pageview('Init page view');
+    };
+
+    componentDidMount(){
+        this.setGA();
+    }
 
     return (
         <Layout>
