@@ -4,6 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 import ProjectCard from "../components/project-card.js";
 
+import ReactGA from "react-ga";
+ReactGA.initialize("G-9QZZ3BFWQT");
+
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
         query ProjectData {
