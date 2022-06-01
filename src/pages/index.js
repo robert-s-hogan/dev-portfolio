@@ -7,7 +7,7 @@ import ProjectCard from "../components/project-card.js";
 export default function IndexPage() {
     const data = useStaticQuery(graphql`
         query ProjectData {
-            allSanityProject {
+            allSanityProject(sort: { fields: publishedAt, order: DESC }) {
                 nodes {
                     id
                     description
@@ -20,6 +20,7 @@ export default function IndexPage() {
                         title
                         imageUrl
                     }
+                    publishedAt
                 }
             }
         }
